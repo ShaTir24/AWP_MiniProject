@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Project Details</title>
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <script type="text/javascript">
+        var app = angular.module('MyApp', [])
+        app.controller('MyController', function ($scope) {
+            $scope.IsVisible = false;
+            $scope.ShowPrize = function (value) {
+                $scope.IsVisible = (value == "Y");
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            background-color: rgb(164, 214, 239);
+        }
+
+        .main {
+            background-color: white;
+            width: 700px;
+            min-height: 40vh;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* input{
+            border: 2px solid rgb(164, 214, 239);
+            width: 280px;
+            height: 4vh;
+        } */
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(30, 178, 223);
+        }
+
+        h1 {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(30, 178, 223);
+            font-size: 40px;
+            /* background-color: white; */
+            width: 100%;
+            /* position: sticky;
+            top: 0;*/
+            text-align: center;
+            /* border: 2px solid red; */
+
+        }
+
+        button a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        button {
+            background-color: rgb(98, 175, 213);
+            width: 20%;
+            margin-bottom: 20px;
+            height: 5vh;
+            border: none;
+            border-radius: 5px;
+            /* margin-left: 220px; */
+            margin-top: 30px;
+        }
+
+        span {
+            font-size: 20px;
+            color: rgb(30, 178, 223);
+            font-weight: bold;
+        }
+
+        .firstinput input {
+
+            border: 2px solid rgb(164, 214, 239);
+            width: 280px;
+            height: 4vh;
+
+        }
+
+        .firstinput textarea {
+            border: 2px solid rgb(164, 214, 239);
+            width: 280px;
+        }
+
+        .projectname,
+        .abstract1,
+        .radio {
+            position: relative;
+            left: 130px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .submit {
+            background-color: rgb(98, 175, 213);
+            width: 20%;
+            margin-bottom: 20px;
+            height: 5vh;
+            border: none;
+            border-radius: 5px;
+            /* margin-left: 220px; */
+            margin-top: 30px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .visible {
+            color: rgb(30, 178, 223);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .visible .radio1 {
+            position: relative;
+            left: 40px;
+        }
+
+        .file {
+            position: relative;
+            left: 43px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div ng-app="MyApp" ng-controller="MyController">
+            <h1>Kaizen Form</h1>
+            <form>
+
+                <table>
+
+                    <tr class="firstinput">
+                        <td>
+                            <p>Project Name:</p>
+                        </td>
+                        <td class="projectname"><input type="text" id="Pname" ng-model="Pname" required></td>
+                    </tr>
+                    <tr class="firstinput">
+                        <td>
+                            <p class="aa">Project Abstract:</p>
+                        </td>
+                        <td class="abstract1"><textarea id="abstract" cols="20" rows="5" ng-model="abstract"
+                                required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Are you Winner?:</p>
+                        </td>
+                        <td class="radio"><input type="radio" ng-model="yes" name="winner" id="yes" value="yes"
+                                ng-click="ShowPrize('Y')"><span>Yes</span>
+                            <input type="radio" ng-model="No" name="winner" id="no" value="no"
+                                ng-click="ShowPrize('N')"><span>No</span>
+                        </td>
+                    </tr>
+
+                    <table ng-show="IsVisible" class="visible">
+                        <tr>
+                            <td>Please Choose Your Rank:</td>
+
+                            <td class="radio1"><input type="radio" ng-model="first" name="rank" id="first"
+                                    value="First" />1st Prize</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="radio1"><input type="radio" ng-model="Second" name="rank" id="second"
+                                    value="Second" />2nd Prize</td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td class="radio1"><input type="radio" ng-model="third" name="rank" value="Third"
+                                    id="third" />3rd Prize</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Upload Winner Certificates:</p>
+                            </td>
+                            <td class="file"><input type="file" multiple ng-model="wincer" id="winner_file" required>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>Upload Praticipation Certificates:</p>
+                            </td>
+                            <td><input type="file" multiple ng-model="parcer" id="Participation_file" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Upload Report:</p>
+                            </td>
+                            <td><input type="file" ng-model="report" id="Report_file" required></td>
+                        </tr>
+                    </table>
+                </table>
+                <div class="flex">
+                    <button><a ng-href="kaizen.html">prev</a></button>
+                    <button class="submit" type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

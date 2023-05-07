@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <title>Kaizen Form</title>
+    <script>
+        // var count=1;
+		// function addRow() {
+        //     count++;
+		// 	// get table element and insert new row
+		// 	var table = document.getElementById("myTable");
+		// 	var newRow = table.insertRow();
+
+		// 	// create cell for paragraph tag and set text content
+		// 	var paragraphCell = newRow.insertCell(0);
+		// 	var paragraph = document.createElement("p");
+		// 	var paragraphText = document.createTextNode("Team Member"+count+" "+"Name:");
+		// 	paragraph.appendChild(paragraphText);
+		// 	paragraphCell.appendChild(paragraph);
+
+            
+		// 	// create cell for input field
+		// 	var inputCell = newRow.insertCell(1);
+		// 	var input = document.createElement("input");
+		// 	input.setAttribute("type", "text");
+			
+		// 	inputCell.appendChild(input);
+
+        //     var row2=table.insertRow();
+
+        //     var paragraphCell = row2.insertCell(0);
+		// 	var paragraph = document.createElement("p");
+        //     paragraph.setAttribute("id","Member"+count)
+		// 	var paragraphText = document.createTextNode("Team Member"+count+" "+"EnrollmentNo:");
+		// 	paragraph.appendChild(paragraphText);
+		// 	paragraphCell.appendChild(paragraph);
+            
+
+            
+		// 	// create cell for input field
+		// 	var inputCell = row2.insertCell(1);
+		// 	var input = document.createElement("input");
+		// 	input.setAttribute("type", "text");
+        //     input.setAttribute("id","Mem"+count+"Enroll")
+        //     inputCell.appendChild(input);
+		// }
+	</script>
+    <link rel="stylesheet" href="../styles/awp.css">
+</head>
+<body >
+    <div ng-app="" >
+        <nav class="nav">
+        <div class="navbar-container">
+            <a href="https://ldce.ac.in" target="_blank"><img src="../assets/logo.png"
+                alt="LDCE"></a>
+                <div class="navbar">
+                    <a ng-href="home.html">
+                        Home
+                    </a>
+                    <a ng-href="internship.html">
+                        Internship
+                    </a>
+                    <a ng-href="project.html">
+                        Project
+                    </a>
+                    <a ng-href="kaizen.html">
+                        Kaizen
+                    </a>
+                </div>
+        </div>
+    </nav>
+        <div class=" main ">
+        <form>
+            <h1>Kaizen Form</h1>
+                <!-- <button onclick="addRow()">Add</button> -->
+         <table id="myTable">
+            <tr>
+                <td> <p>Team Leader Name:</p></td>
+                <td> <input  type="text"  id="LeaderName" required ng-model="LeaderName"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Leader EnrollmentNumber:</p></td>
+                <td> <input  type="text" id="LeaderEnroll" required ng-model="LeaderEnroll"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Leader Email:</p></td>
+                <td> <input  type="text" id="LeaderEmail" required ng-model="LeaderEmail"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Leader Phone No:</p></td>
+                <td> <input  type="text" id="LeaderPhone" required ng-model="LeaderPhone"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member-1 Name:</p></td>
+                <td> <input  type="text" id="Member1" required ng-model="Member1"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member1 EnrollmentNumber:</p></td>
+                <td> <input  type="text" id="Mem1Enroll" required ng-model="Mem1Enroll"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member1 Email:</p></td>
+                <td> <input  type="email" id="Mem1Email" required ng-model="Mem1Email"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member-2 Name:</p></td>
+                <td> <input  type="text" id="Member2" required ng-model="Member2"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member2 EnrollmentNumber:</p></td>
+                <td> <input  type="text" id="Mem2Enroll" required ng-model="Mem2Enroll"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member2 Email:</p></td>
+                <td> <input  type="email" id="Mem2Email" required ng-model="Mem2Email"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member-3 Name:</p></td>
+                <td> <input  type="text" id="Member3" required ng-model="Member3"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member3 EnrollmentNumber:</p></td>
+                <td> <input  type="text" id="Mem3Enroll" required ng-model="Mem3Enroll"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member3 Email:</p></td>
+                <td> <input  type="email" id="Mem3Email" required ng-model="Mem3Email"/></td>
+            </tr>
+            <tr>
+                <td> <p>Team Member-4 Name:</p></td>
+                <td> <input  type="text" id="Member4" required ng-model="Member4"/></td>
+            </tr>
+            <tr class="mb-8">
+                <td> <p>Team Member4 EnrollmentNumber:</p></td>
+                <td> <input  type="text" id="Mem4Enroll" required ng-model="Mem4Enroll"/></td>
+            </tr>
+            <tr class="mb-8">
+                <td> <p>Team Member4 Email:</p></td>
+                <td> <input  type="email" id="Mem4Email" required ng-model="Mem4Email"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button><a ng-href="Project_kaizen.html" id="next">Next</a></button>
+                </td>
+            </tr>
+           </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

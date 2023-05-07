@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/awp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="">
+        <nav class="nav">
+            <div class="navbar-container">
+                <a href="https://ldce.ac.in" target="_blank"><img src="../assets/logo.png"
+                    alt="LDCE"></a>
+                    <div class="navbar">
+                        <a ng-href="home.html">
+                            Home
+                        </a>
+                        <a ng-href="internship.html">
+                            Internship
+                        </a>
+                        <a ng-href="project.html">
+                            Project
+                        </a>
+                        <a ng-href="kaizen.html">
+                            Kaizen
+                        </a>
+                    </div>
+            </div>
+        </nav>
+        <div class="main">
+            <form action="/students" method="post" (ngSubmit)="onSubmit()">
+                <h2>Project Details Submission Form (UDP)</h2>
+                <table id="form-table">
+                    <tr>
+                        <td><label for="name">Team Leader Name :</label></td>
+                        </td>
+                        <td>
+                            <input type="text" id="leaderName" 
+                                [(ngModel)]="leaderName" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="enroll">Team Leader Enrollment No. :</label></td>
+                        <td>
+                            <input type="number" id="leaderEnroll" 
+                                [(ngModel)]="leaderEnroll" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Team Leader Email Address :</label></td>
+                        <td>
+                            <input type="email" id="leaderEmail" 
+                                [(ngModel)]="leaderEmail" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cno">Team Leader Contact No. :</label> </td>
+                        <td>
+                            <input type="number" id="leaderCno" 
+                                [(ngModel)]="leaderCno" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Team Member 1 Name :</label></td>
+                        </td>
+                        <td>
+                            <input type="text" id="mem1Name" 
+                                [(ngModel)]="name" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="enroll">Team Member 1 Enrollment No. :</label></td>
+                        <td>
+                            <input type="number" id="mem1Enroll" 
+                                [(ngModel)]="enroll" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Team Member 1 Email Address :</label></td>
+                        <td>
+                            <input type="email" id="mem1Email" 
+                                [(ngModel)]="email" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cno">Team Member 1 Contact No. :</label> </td>
+                        <td>
+                            <input type="number" id="mem1Cno" 
+                                [(ngModel)]="cno" required />
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><label for="name">Team Member 2 Name :</label></td>
+                        </td>
+                        <td>
+                            <input type="text" id="mem2Name" 
+                                [(ngModel)]="name" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="enroll">Team Member 2 Enrollment No. :</label></td>
+                        <td>
+                            <input type="number" id="mem2Enroll" 
+                                [(ngModel)]="enroll" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Team Member 2 Email Address :</label></td>
+                        <td>
+                            <input type="email" id="mem2Email" 
+                                [(ngModel)]="email" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cno">Team Member 2 Contact No. :</label> </td>
+                        <td>
+                            <input type="number" id="mem2Cno" 
+                                [(ngModel)]="cno" required />
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><label for="name">Team Member 3 Name :</label></td>
+                        </td>
+                        <td>
+                            <input type="text" id="mem3Name" 
+                                [(ngModel)]="name" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="enroll">Team Member 3 Enrollment No. :</label></td>
+                        <td>
+                            <input type="number" id="mem3Enroll" 
+                                [(ngModel)]="enroll" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Team Member 3 Email Address :</label></td>
+                        <td>
+                            <input type="email" id="mem3Email" 
+                                [(ngModel)]="email" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cno">Team Member 3 Contact No. :</label> </td>
+                        <td>
+                            <input type="number" id="mem3Cno" 
+                                [(ngModel)]="cno" required />
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><label for="name">Team Member 4 Name :</label></td>
+                        </td>
+                        <td>
+                            <input type="text" id="mem4Name" 
+                                [(ngModel)]="name" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="enroll">Team Member 4 Enrollment No. :</label></td>
+                        <td>
+                            <input type="number" id="mem4Enroll" 
+                                [(ngModel)]="enroll" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Team Member 4 Email Address :</label></td>
+                        <td>
+                            <input type="email" id="mem4Email" 
+                                [(ngModel)]="email" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cno">Team Member 4 Contact No. :</label> </td>
+                        <td>
+                            <input type="number" id="mem4Cno" 
+                                [(ngModel)]="cno" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="projectTitle">Project Title :</label> </td>
+                        <td>
+                            <input type="text" id="projectTitle" 
+                                [(ngModel)]="title" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="projectDesc">Project Description :</label> </td>
+                        <td>
+                            <textarea name="projectDesc" id="projectDesc" 
+                                id="" cols="40" rows="3" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="projectReport">Project Report :</label> </td>
+                        <td>
+                            <input type="file" id="projectReport" [(ngModel)]="report" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" id="btn">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div ng-view></div>
+</body>
+
+</html>

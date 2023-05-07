@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Data</title>
+</head>
+<body>
+  <h1>Student List</h1>
+  <ul id="studentList"></ul>
+
+  <script>
+    function fetchData() {
+      fetch('/students')
+        .then(response => response.json())
+        .then(students => {
+          const studentList = document.getElementById('studentList');
+          students.forEach(student => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Name: ${student.name}, Enrollment: ${student.enroll}`;
+            studentList.appendChild(listItem);
+          });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+    fetchData();
+  </script>
+</body>
+</html>

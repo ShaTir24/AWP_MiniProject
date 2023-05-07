@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Form</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/awp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="">
+        <nav class="nav">
+            <div class="navbar-container">
+                <a href="https://ldce.ac.in" target="_blank"><img src="../assets/logo.png" alt="LDCE"></a>
+                <div class="navbar">
+                    <a ng-href="home.html">
+                        Home
+                    </a>
+                    <a ng-href="internship.html">
+                        Internship
+                    </a>
+                    <a ng-href="project.html">
+                        Project
+                    </a>
+                    <a ng-href="kaizen.html">
+                        Kaizen
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <form action="/students" method="post" (ngSubmit)="onSubmit()">
+                <h2>Internship Details Submission Form (IDP)</h2>
+                <table id="myTable">
+                    <tr>
+                        <td><label for="name">
+                                <p> Name :</p>
+                            </label></td>
+                        <td>
+                            <input type="text" id="name" [(ngModel)]="name" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="enroll">
+                                <p> Enrollment No. :</p>
+                            </label></td>
+                        <td>
+                            <input type="number" id="enroll" [(ngModel)]="enroll" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">
+                                <p> Email Address :</p>
+                            </label></td>
+                        <td>
+                            <input type="email" id="email" [(ngModel)]="email" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cno">
+                                <p> Contact No. :</p>
+                            </label></td>
+                        <td>
+                            <input type="number" id="cno" [(ngModel)]="cno" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="internshipTitle">
+                                <p> Internship Position/Title :</p>
+                            </label></td>
+                        <td>
+                            <input type="text" id="internshipTitle" [(ngModel)]="title" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="startDate">
+                                <p> Internship Start Date :</p>
+                            </label></td>
+                        <td>
+                            <input type="date" id="startDate" [(ngModel)]="startDate" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="endDate">
+                                <p> Internship End Date :</p>
+                            </label></td>
+                        <td>
+                            <input type="date" id="endDate" [(ngModel)]="endDate" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="offerLetter">
+                                <p> Internship Offer Letter :</p>
+                            </label></td>
+                        <td>
+                            <input type="file" id="offerLetter" [(ngModel)]="offerLetter" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="completionCerti">
+                                <p> Internship Completion Certificate :</p>
+                            </label> </td>
+                        <td>
+                            <input type="file" id="completionCerti" [(ngModel)]="completionCerti" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="internshipReport">
+                                <p> Internship Report :</p>
+                            </label> </td>
+                        <td>
+                            <input type="file" id="internshipReport" [(ngModel)]="report" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" id="btn">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
