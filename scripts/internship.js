@@ -1,6 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const submitButton = document.getElementById('btn');
-    submitButton.addEventListener('click', () => {
+addInternshipData = () => {
         const name = document.getElementById('name').value;
         const enrollmentNo = document.getElementById('enroll').value;
         const email = document.getElementById('email').value;
@@ -12,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const completionCertificate = document.getElementById('completionCerti');
         const intershipReport = document.getElementById('internshipReport');
 
-        const offer_file = offerLetter.files[0];
-        const completion_file = completionCertificate.files[0];
-        const internshipReport_file = intershipReport.files[0];
+        const offer_file = JSON.stringify(offerLetter.files[0]);
+        const completion_file = JSON.stringify(completionCertificate.files[0]);
+        const internshipReport_file = JSON.stringify(intershipReport.files[0]);
 
         const formdata = {
             enroll: enrollmentNo,
@@ -42,5 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => {
                 console.error('Error adding data:', error);
             });
-    });
-});
+    }
