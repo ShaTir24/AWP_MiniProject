@@ -1,0 +1,11 @@
+Name : required text
+enrollment no : required number
+email address : required email
+gender : required radio
+contact no : required number
+internship title : required text
+internship start date : required date
+internship end date : required date
+internship offer letter : required file
+internship completion certificate : required file
+internship report : required file

@@ -1,0 +1,8 @@
+Team Leader Name : required text
+Team Leader enrollment no : required number
+Team Leader email address : required email
+Team Leader gender : required radio
+Team Leader contact no : required number
+Project title : required text
+Project Description : required textarea
+Project report : required file
