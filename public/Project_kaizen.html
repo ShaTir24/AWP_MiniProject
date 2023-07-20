@@ -18,134 +18,215 @@
         });
     </script>
 
-    <style>
-        body {
-            background-color: rgb(164, 214, 239);
-        }
+<style>
+    body {
+        background-color: rgb(164, 214, 239);
+    }
+    html{
+font-size: 62.5%;
+}
+    .main {
+        background-color: white;
+        width: 70rem;
+        min-height: 40vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: .5rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
 
-        .main {
-            background-color: white;
-            width: 700px;
-            min-height: 40vh;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
+    /* input{
+        border: 2rem solid rgb(164, 214, 239);
+        width: 280rem;
+        height: 4vh;
+    } */
+    p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(30, 178, 223);
+    }
 
-        /* input{
-            border: 2px solid rgb(164, 214, 239);
-            width: 280px;
-            height: 4vh;
-        } */
-        p {
-            font-size: 18px;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(30, 178, 223);
-        }
+    h1 {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(30, 178, 223);
+        font-size: 4rem;
+        /* background-color: white; */
+        width: 100%;
+        /* position: sticky;
+        top: 0;*/
+        text-align: center;
+        /* border: 2rem solid red; */
 
-        h1 {
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(30, 178, 223);
-            font-size: 40px;
-            /* background-color: white; */
-            width: 100%;
-            /* position: sticky;
-            top: 0;*/
-            text-align: center;
-            /* border: 2px solid red; */
+    }
 
-        }
+    button a {
+        text-decoration: none;
+        font-size: 2.0rem;
+        color: white;
+        font-weight: bold;
 
-        button a {
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
+    }
 
-        }
+    button {
+        background-color: rgb(98, 175, 213);
+        width: 20%;
+        margin-bottom: 2.0rem;
+        height: 5vh;
+        border: none;
+        border-radius: .5rem;
+        /* margin-left: 220rem; */
+        margin-top: 3.0rem;
+    }
 
-        button {
-            background-color: rgb(98, 175, 213);
-            width: 20%;
-            margin-bottom: 20px;
-            height: 5vh;
-            border: none;
-            border-radius: 5px;
-            /* margin-left: 220px; */
-            margin-top: 30px;
-        }
+    span {
+        font-size: 2.0rem;
+        color: rgb(30, 178, 223);
+        font-weight: bold;
+    }
 
-        span {
-            font-size: 20px;
-            color: rgb(30, 178, 223);
-            font-weight: bold;
-        }
+    .firstinput input {
 
-        .firstinput input {
+        border: .2rem solid rgb(164, 214, 239);
+        width: 28rem;
+        height: 4vh;
 
-            border: 2px solid rgb(164, 214, 239);
-            width: 280px;
-            height: 4vh;
+    }
 
-        }
+    .firstinput textarea {
+        border: .2rem solid rgb(164, 214, 239);
+        width: 28rem;
+    }
 
-        .firstinput textarea {
-            border: 2px solid rgb(164, 214, 239);
-            width: 280px;
-        }
+    .projectname,
+    .abstract1,
+    .radio {
+        position: relative;
+        left: 13rem;
+    }
 
-        .projectname,
-        .abstract1,
-        .radio {
-            position: relative;
-            left: 130px;
-        }
-
-        .flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
 
-        }
+    }
 
-        .submit {
-            background-color: rgb(98, 175, 213);
-            width: 20%;
-            margin-bottom: 20px;
-            height: 5vh;
-            border: none;
-            border-radius: 5px;
-            /* margin-left: 220px; */
-            margin-top: 30px;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            margin-left: 20px;
-        }
+    .submit {
+        background-color: rgb(98, 175, 213);
+        width: 20%;
+        margin-bottom: 2.0rem;
+        height: 5vh;
+        border: none;
+        border-radius: .5rem;
+        /* margin-left: 220rem; */
+        margin-top: 3.0rem;
+        color: white;
+        font-size: 2.0rem;
+        font-weight: bold;
+        margin-left: 2.0rem;
+    }
 
-        .visible {
-            color: rgb(30, 178, 223);
-            font-size: 20px;
-            font-weight: bold;
-        }
+    .visible {
+        color: rgb(30, 178, 223);
+        font-size: 2.0rem;
+        font-weight: bold;
+    }
 
-        .visible .radio1 {
-            position: relative;
-            left: 40px;
-        }
+    .visible .radio1 {
+        position: relative;
+        left: 4.0rem;
+    }
 
-        .file {
-            position: relative;
-            left: 43px;
-        }
-    </style>
+    .file {
+        position: relative;
+        left: 4.3rem;
+    }
+    @media(max-width:998px) {
+html{
+    font-size: 55%;
+}
+}
+@media(max-width:768px) {
+html{
+    font-size: 45%;
+}
+}
+@media(max-width:668px) {
+html{
+    font-size: 40%;
+}
+.main{
+    /* width: 100%; */
+    height: 90vh;
+    padding-left: .5rem;
+}
+}
+@media(max-width:468px) {
+html{
+    font-size: 35%;
+}
+.main{
+    /* width: 100%; */
+    height: 90vh;
+    padding-left: .5rem;
+}
+
+}
+@media(max-width:468px ) and (min-width:400px) {
+html{
+    font-size: 30%;
+}
+.main{
+    width: 95%;
+    
+    height: 100vh; 
+     
+    padding-left: .5rem;
+     padding-right: .5rem;
+}
+h1{
+    font-size: 11rem;
+}
+p{
+    font-size: 2.5rem;
+}
+.myApp{
+    padding: 1rem;
+}
+}
+@media(max-width:400px ) and (min-width:300px) {
+html{
+    font-size: 30%;
+}
+.main{
+    width: 100%;
+    /* background-color: red; */
+    height: 90vh; 
+    /* position: relative; */
+    /* left: -1.5%;  */
+    /* padding-left: .5rem; */
+     /* padding-right: .5rem; */
+}
+h1{
+    font-size: 10rem;
+    position: relative;
+    top: -10%;
+}
+.myApp{
+    padding: 1rem;
+}
+p{
+    font-size: 2.5rem;
+}
+
+}
+</style>
 </head>
 
 <body>

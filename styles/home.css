@@ -1,3 +1,6 @@
+html{
+    font-size: 62.5%;
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -30,4 +33,81 @@ ul{
 }
 ul li{
     margin: 5px;
+}
+@media(max-width:998px) {
+    html{
+        font-size: 55%;
+    }
+    
+}
+@media(max-width:768px) {
+    html{
+        font-size: 45%;
+    }
+    .container{
+        height: 40vh;
+        width: 70rem;
+        justify-content: flex-start;
+        /* font-size: 30rem; */
+       }
+       #header{
+        font-size: 5rem;
+    }
+    ul{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .wlc p{
+        font-size: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+}
+@media(max-width:668px) {
+    html{
+        font-size: 35%;
+    }
+    .container{
+        height: 30vh;
+        width: 70rem;
+        justify-content: flex-start;
+        /* font-size: 30rem; */
+       }
+       #header{
+        font-size: 5rem;
+    }
+    ul{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .wlc p{
+        font-size: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
+}
+@media(max-width:468px) {
+    html{
+        font-size: 25%;
+    }
+   .container{
+    height: 30vh;
+    width: 80rem;
+    justify-content: flex-start;
+    /* font-size: 30rem; */
+   }
+   #header{
+    font-size: 5rem;
+}
+ul{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-top: 2rem;
+}
+
+.wlc p{
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
 }
