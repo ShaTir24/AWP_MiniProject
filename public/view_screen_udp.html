@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>View</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 2px solid rgb(98, 175, 213);
+            border-collapse: collapse;
+            color: rgb(98, 175, 213);
+            background-color: white;
+            padding: 15px;
+        }
+
+        table {
+            width: 80%;
+        }
+
+        body {
+            background-color: rgb(98, 175, 213);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>UDP Data</h1>
+        <table class="udp">
+            <thead>
+                <tr>
+                    <th>Sr_No</th>
+                    <th>Leader Enrollment No</th>
+                    <th>Leader Name</th>
+                    <th>Leader Email</th>
+                    <th>Gender</th>
+                    <th>Contact No</th>
+                    <th>Project Title</th>
+                    <th>Projcet Abstract</th>
+                    <th>Report</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sr_No</td>
+                    <td>Leader Enrollment No</td>
+                    <td>Leader Name</td>
+                    <td>Leader Email</td>
+                    <td>Gender</td>
+                    <td>Contact No</td>
+                    <td>Project Title</td>
+                    <td>Projcet Abstract</td>
+                    <td>Report</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
