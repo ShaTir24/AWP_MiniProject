@@ -1,113 +1,137 @@
-html{
+html {
     font-size: 62.5%;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-self: center;
     background-color: white;
-    width: 40rem;
+    width: 52rem;
     margin: auto;
-    margin-top: 2rem;
-    padding: 2rem;
+    margin-top: 7rem;
+    padding: 2.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
-.wlc{
+
+.wlc {
     width: 70%;
     margin: auto;
+    margin-top: 3rem;
 }
-.wlc p{
+
+.wlc p {
     color: rgb(1, 28, 78);
+    text-align: justify;
 }
-#header{
-    font-size: 1.5rem;
+
+#header {
+    font-size: 2rem;
     line-height: 2rem;
+    margin-bottom: 1rem;
 }
-ul{
-    font-size: 1rem;
+
+ul {
+    font-size: 1.65rem;
     line-height: 1.75rem;
     padding-left: 1rem;
 }
-ul li{
+
+ul li {
     margin: 5px;
+    text-align: justify;
 }
+
 @media(max-width:998px) {
-    html{
+    html {
         font-size: 55%;
     }
-    
 }
-@media(max-width:768px) {
-    html{
+
+@media (max-width:768px) {
+    html {
         font-size: 45%;
     }
-    .container{
+
+    .container {
         height: 40vh;
         width: 70rem;
         justify-content: flex-start;
         /* font-size: 30rem; */
-       }
-       #header{
+    }
+
+    #header {
         font-size: 5rem;
     }
-    ul{
+
+    ul {
         font-size: 2rem;
         margin-top: 2rem;
     }
-    .wlc p{
+
+    .wlc p {
         font-size: 2rem;
         margin-top: 10rem;
         margin-bottom: 10rem;
     }
 }
+
 @media(max-width:668px) {
-    html{
+    html {
         font-size: 35%;
     }
-    .container{
+
+    .container {
         height: 30vh;
         width: 70rem;
         justify-content: flex-start;
         /* font-size: 30rem; */
-       }
-       #header{
+    }
+
+    #header {
         font-size: 5rem;
     }
-    ul{
+
+    ul {
         font-size: 2rem;
         margin-top: 2rem;
     }
-    .wlc p{
+
+    .wlc p {
         font-size: 2rem;
         margin-top: 10rem;
         margin-bottom: 10rem;
     }
 }
+
 @media(max-width:468px) {
-    html{
+    html {
         font-size: 25%;
     }
-   .container{
-    height: 30vh;
-    width: 80rem;
-    justify-content: flex-start;
-    /* font-size: 30rem; */
-   }
-   #header{
-    font-size: 5rem;
-}
-ul{
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-top: 2rem;
-}
 
-.wlc p{
-    font-size: 2rem;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
+    .container {
+        height: 30vh;
+        width: 80rem;
+        justify-content: flex-start;
+        /* font-size: 30rem; */
+    }
+
+    #header {
+        font-size: 5rem;
+    }
+
+    ul {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-top: 2rem;
+    }
+
+    .wlc p {
+        font-size: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    }
 }

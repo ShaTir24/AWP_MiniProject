@@ -1,45 +1,55 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-.nav{
+
+.nav {
     margin-bottom: 1rem;
     width: 100%;
-    background-color: rgb(91,33,182);
+    background-color: rgb(91, 33, 182);
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
-td{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+
+td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* width: 200px; */
 }
-.navbar{
+
+.navbar {
     display: flex;
 }
-.navbar-container{
+
+.navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-a{
-    color :white;
+
+a {
+    color: white;
     text-decoration: none;
-    margin-right: 2rem;
-    font-size: 1.25rem;
+    margin-right: 3.8rem;
+    font-size: 1.75rem;
     line-height: 1.75rem;
     font-weight: bold;
 }
-a:hover{
+
+a:hover {
     color: yellow;
 }
-body{
+
+body {
     background-color: rgb(164, 214, 239);
 }
-.main{
+
+.main {
     background-color: white;
     width: 70rem;
     min-height: 40vh;
@@ -51,29 +61,37 @@ body{
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
-input,textarea{
+
+input,
+textarea {
     border: .2rem solid rgb(164, 214, 239);
     width: 28rem;
     border-radius: 0.375rem;
     padding: .8rem;
 }
-input[type="file"]{
+
+input[type="file"] {
     border: none;
 }
-p,label{
+
+p,
+label {
     font-size: 1.8rem;
     font-weight: bold;
     color: rgb(30, 178, 223);
 }
-img{
-    width: 2.5rem;
+
+img {
+    width: 3.5rem;
     margin-top: .5rem;
 }
-h1,h2{
+
+h1,
+h2 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(30, 178, 223);
-    /* font-size: 40rem; */
+    font-size: 2rem;
     /* background-color: white; */
     width: 100%;
     /* position: sticky;
@@ -81,16 +99,18 @@ h1,h2{
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    /* border: 2rem solid red; */ 
+    /* border: 2rem solid red; */
 
 }
-#next{
+
+#next {
     text-decoration: none;
     font-size: 2.3rem;
     color: white;
     padding-left: 2.1rem;
 }
-button{
+
+button {
     background-color: rgb(98, 175, 213);
     margin-bottom: 2.0rem;
     padding: .5rem;
@@ -98,74 +118,88 @@ button{
     border-radius: .7rem;
     cursor: pointer;
 }
-#btn{
+
+#btn {
     background-color: rgb(98, 175, 213);
     font-size: 1.5rem;
     color: white;
     padding: .9rem;
     font-weight: bold;
 }
-#btn:hover{
+
+#btn:hover {
     background-color: rgb(70, 165, 212);
 }
 
 @media(max-width:998px) {
-    html{
+    html {
         font-size: 55%;
     }
-    .navbar-container{
-        height: 5vh;
 
+    .navbar-container {
+        height: 5vh;
     }
-    a{
+
+    a {
         font-size: 2rem;
     }
 }
+
 @media(max-width:768px) {
-    html{
+    html {
         font-size: 45%;
     }
-    .navbar-container{
-        height: 5vh;
 
+    .navbar-container {
+        height: 5vh;
     }
-    a{
+
+    a {
         font-size: 2rem;
     }
 }
+
 @media(max-width:668px) {
-    html{
+    html {
         font-size: 35%;
     }
-    .navbar-container{
-        height: 5vh;
 
+    .navbar-container {
+        height: 5vh;
     }
-    a{
+
+    a {
         font-size: 3rem;
     }
 }
+
 @media(max-width:468px) {
-    html{
+    html {
         font-size: 25%;
     }
-    .main{
+
+    .main {
         width: 100%;
     }
-    .navbar-container{
+
+    .navbar-container {
         height: 5vh;
 
     }
-    a{
+
+    a {
         font-size: 3rem;
     }
-    .main h2{
+
+    .main h2 {
         font-size: 4rem;
     }
-    .main h1{
+
+    .main h1 {
         font-size: 4rem;
     }
-    .internship{
+
+    .internship {
         height: 90vh;
         /* margin-top: 8rem; */
     }
