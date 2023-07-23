@@ -1,8 +1,8 @@
-const Kaizen = require('../models/kaizen')
+const Project = require('../models/project')
 
-//showing the kaizen project details in tabular form
+//showing the project details in tabular form
 const index = (req, res, next) => {
- Kaizen.find()  //returns all projects
+ Project.find()  //returns all projects
     .then(response => {
         res.json({
             response
@@ -15,10 +15,10 @@ const index = (req, res, next) => {
     })
 }
 
-//showing single kaizen project
+//showing single Project
 const show = (req, res, next) => {
-    let kaizenID = req.body.leaderEnroll;
-    Kaizen.findById(kaizenID)
+    let ProjectID = req.body.leaderEnroll;
+    Project.findById(ProjectID)
     .then(response => [
         res.json({
             response
@@ -31,9 +31,9 @@ const show = (req, res, next) => {
     })
 }
 
-//add and deploy kaizen projects to the database
+//add and deploy projects to the database
 const store = (req, res, next) => {
-    let kaizen = new Kaizen({
+    let project = new Project({
         leaderName: req.body.leaderName,
         leaderEnroll: req.body.leaderEnroll,
         leaderEmail: req.body.leaderEmail,
@@ -52,26 +52,22 @@ const store = (req, res, next) => {
         member4Email: req.body.member4Email,
         projectName: req.body.projectName,
         projectAbstract: req.body.projectAbstract,
-        winner: req.body.winner,
-        rank: req.body.rank,
-        winnerCertificate: req.body.winnerCertificate,
-        participationCertificate: req.body.participationCertificate,
         projectReport: req.body.projectReport
     })
-    kaizen.save()
+    project.save()
         .then(response => {
             res.json({
-                message: "Kaizen Project Details Added Successfully"
+                message: "Project Details Added Successfully"
             })
         })
         .catch(error => {
             res.json({
-                message: "An error occurred while saving the Kaizen project details"+error
+                message: "An error occurred while saving the Project details"+error
             })
         })
 }
 
-//update a kaizen project by kaizen id
+//update a project by project id
 const update = (req, res, next) => {
     let enrollment = req.body.leaderEnroll
 
@@ -94,39 +90,35 @@ const update = (req, res, next) => {
         member4Email: req.body.member4Email,
         projectName: req.body.projectName,
         projectAbstract: req.body.projectAbstract,
-        winner: req.body.winner,
-        rank: req.body.rank,
-        winnerCertificate: req.body.winnerCertificate,
-        participationCertificate: req.body.participationCertificate,
         projectReport: req.body.projectReport
     }
 
 
-    Kaizen.findByIdAndUpdate(enrollment, {$set: updatedData})
+    Project.findByIdAndUpdate(enrollment, {$set: updatedData})
         .then(() => {
             res.json({
-                message: "Kaizen project details updated successfully"
+                message: "Project details updated successfully"
             })
         })
         .catch(error => {
             res.json({
-                message: "An error occurred while updating Kaizen project"
+                message: "An error occurred while updating Project"
             })
         })
 }
 
-//delete a kaizen project details
+//delete a project details
 const destroy = (req, res, next) => {
     let enrollment = req.body.leaderEnroll
-    Kaizen.findOneAndRemove(enrollment)
+    Project.findOneAndRemove(enrollment)
         .then(() => {
             res.json({
-                message: "Kaizen Project deleted successfully"
+                message: "Project deleted successfully"
             })
         })
         .catch(error => {
             res.json({
-                message: "Error Occurred while deleting the Kaizen Project"
+                message: "Error Occurred while deleting the Project"
             })
         })
 }

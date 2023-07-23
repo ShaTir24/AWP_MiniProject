@@ -19,14 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const member4Email = document.getElementById('Mem4Email').value;
         const projectName = document.getElementById('Pname').value;
         const projectAbstract = document.getElementById('abstract').value;
-        const winner = document.querySelector('input[name="winner"]:checked').value;
-        const rank = document.querySelector('input[name="rank"]:checked').value;
-        const winnerCertificate = document.getElementById('winner_file');
-        const partcipationCertificate = document.getElementById('Participation_file');
         const projectReport = document.getElementById('Report_file');
 
-        const winner_file = winnerCertificate.files[0];
-        const participation_file = partcipationCertificate.files[0];
         const report_file = projectReport.files[0];
 
 
@@ -53,14 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
             member4Email: member4Email,
             projectName: projectName,
             projectAbstract: projectAbstract,
-            winner: winner,
-            rank: rank,
-            winner_file: winner_file,
-            participation_file: participation_file,
             report_file: report_file
         };
 
-        fetch('/localhost:3000/api/kaizen/store', {
+        fetch('/localhost:3000/api/project/store', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formdata)

@@ -6,6 +6,7 @@ const morgan = require('morgan')
 const MONGO_URI = process.env.MONGO_URI
 const InternshipRoute = require('./routes/internship')
 const kaizenRoute = require('./routes/kaizen')
+const projectRoute = require('./routes/project')
 
 mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,});
@@ -27,3 +28,4 @@ app.listen(PORT, () => {
 
 app.use('/api/internship', InternshipRoute)
 app.use('/api/kaizen', kaizenRoute)
+app.use('/api/project', projectRoute)

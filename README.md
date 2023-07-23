@@ -12,3 +12,9 @@ Mini project for Advanced web Programming to develop a data collection for inter
 + Frontend: Angular, HTML, CSS
 * Backend: Node.js, Express.js
 - Database: MongoDB
+
+# Structure
+- Three seperate pages, each for:
+  1. Internship (public/internship.html, scripts/internship.js, routes/internship.js, models/Internship.js)
+  2. Kaizen Project (public/Project_kaizen.html, scripts.kaizen.js, routes/kaizen.js, models/kaizen.js)
+  3. Project (public/project.html, scripts/project.js, routes/project.js, models/project.js)
