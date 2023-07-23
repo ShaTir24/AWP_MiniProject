@@ -32,6 +32,7 @@
                         Kaizen
                     </a>
                 </div>
+                <div class="mobile-menu-icon">&#9776;</div>
             </div>
         </nav>
 
@@ -59,6 +60,19 @@
             </ul>
         </div>
     </div>
+
+    <!-- script for hamburger navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+          const navbar = document.querySelector('.navbar');
+      
+          mobileMenuIcon.addEventListener('click', function () {
+            navbar.classList.toggle('show');
+            mobileMenuIcon.style.display = "none";
+          });
+        });
+      </script>
 </body>
 
 </html>

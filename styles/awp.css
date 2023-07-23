@@ -45,6 +45,14 @@ a:hover {
     color: yellow;
 }
 
+.mobile-menu-icon {
+    display: none;
+    /* Hidden by default on desktop */
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 body {
     background-color: rgb(164, 214, 239);
 }
@@ -171,6 +179,10 @@ button {
     a {
         font-size: 3rem;
     }
+    .wlc p{
+        margin-top: 7rem;
+        margin-right: 5rem;
+    }
 }
 
 @media(max-width:468px) {
@@ -185,6 +197,10 @@ button {
     .navbar-container {
         height: 5vh;
 
+    }
+    .wlc p{
+        margin-top: 7rem;
+        margin-right: 5rem;
     }
 
     a {
@@ -204,3 +220,39 @@ button {
         /* margin-top: 8rem; */
     }
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        /* Hide the navigation links by default on mobile */
+        flex-direction: column;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        align-items: flex-start;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        /* Show the hamburger menu icon on mobile */
+    }
+
+    a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:rgb(91, 33, 182);
+      padding: 7px;
+      margin-right: -7px;
+    }
+  }
+  
