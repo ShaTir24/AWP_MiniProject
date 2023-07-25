@@ -1,0 +1,47 @@
+const app=angular.module("view-idp",[]);
+app.controller('searchbar',function($scope){
+    var idpdata=[{
+        srno:1,
+        enroll_no:1234,
+        name:'abc',
+        email:'abc@gmail.com',
+        gender:'f',
+        conatct_no:'9879615010',
+        project_name:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:'',
+        startDate:'1/2/23',
+        endDate:'1/6/23',
+        completioncertificate:'',
+        offerletter:''
+    },{
+        srno:2,
+        enroll_no:2234,
+        name:'xyc',
+        email:'abc@gmail.com',
+        gender:'f',
+        conatct_no:'9879615010',
+        project_name:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:'',
+        startDate:'11/2/23',
+        endDate:'19/6/23',
+        completioncertificate:'',
+        offerletter:''
+    },{
+        srno:3,
+        enroll_no:4434,
+        name:'abc',
+        email:'xyc@gmail.com',
+        gender:'m',
+        conatct_no:'9879615010',
+        project_name:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:'',
+        startDate:'10/5/23',
+        endDate:'1/8/23',
+        completioncertificate:'',
+        offerletter:''
+    }]  
+    $scope.idpdata=idpdata;
+})

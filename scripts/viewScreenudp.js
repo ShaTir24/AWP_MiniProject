@@ -1,0 +1,35 @@
+const app=angular.module("view-udp",[]);
+app.controller('searchbar',function($scope){
+    var udpdata=[{
+        srno:1,
+        leader_enroll:1234,
+        name:'abc',
+        email:'abc@gmail.com',
+        gender:'f',
+        conatct_no:'9879615010',
+        project_title:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:''
+    },{
+        srno:2,
+        leader_enroll:1231,
+        name:'abd',
+        email:'xyz@gmail.com',
+        gender:'f',
+        conatct_no:'9879615010',
+        project_title:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:''
+    },{
+        srno:3,
+        leader_enroll:1264,
+        name:'abc',
+        email:'abc@gmail.com',
+        gender:'m',
+        conatct_no:'9879615010',
+        project_title:'zxy',
+        project_abstarct:'abjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:''
+    }]  
+    $scope.udpdata=udpdata;
+})

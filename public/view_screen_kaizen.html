@@ -31,11 +31,33 @@
             justify-content: center;
             align-items: center;
         }
+        .serachbar1{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            /* border:2px solid red; */
+            /* color: red; */
+        }
+        .serachbar1 input{
+              height: 4vh;
+              border-radius: 6px;
+              border: none;
+              text-align: center;
+              /* width: 100px; */
+        }
+        .maincontainer{
+            text-align: center;
+            position: relative;
+            left: 6%;
+        }
     </style>
 </head>
-<body>
+<body ng-app="view-kaizen">
 <div class="container">
     <h1>Kaizen Data</h1>
+    <p class="serachbar1">Search: <input type="text" ng-model="searchfeild" placeholder="Search Here.."/></p>
+    <div ng-controller="searchbar" class="maincontainer">
     <table class="kaizen">
         <thead>
             <tr>
@@ -52,20 +74,22 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
-            <td>Sr_No</td>
-            <td>Enrollment No</td>
-            <td>Leader Name</td>
-            <td>Email</td>
-           <td>Contact No</td>
-            <td>Project Name</td>
-            <td>Project Abstract</td>
-            <td>Winner status</td>
-            <td>Report</td>
-            <td>Certificate</td>
+            <tr ng-repeat="kaizen in kaizendata | filter:searchfeild">
+            <td>{{kaizen.srno}}</td>
+            <td>{{kaizen.enroll_no}}</td>
+            <td>{{kaizen.Leader_name}}</td>
+            <td>E{{kaizen.email}}</td>
+           <td>{{kaizen.conatct_no}}</td>
+            <td>{{kaizen.project_title}}</td>
+            <td>{{kaizen.project_abstarct}}</td>
+            <td>{{kaizen.winner_status}}</td>
+            <td>{{kaizen.report}}</td>
+            <td>{{kaizen.certificate}}</td>
         </tr>
         </tbody>
     </table>
+    </div>
 </div>
+<script src="../scripts/viewScreenkaizen.js"></script>
 </body>
 </html>

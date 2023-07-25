@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
     <title>View</title>
     <style>
         table,
@@ -38,12 +39,34 @@
             justify-content: center;
             align-items: center;
         }
+        .serachbar1{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            /* border:2px solid red; */
+            /* color: red; */
+        }
+        .serachbar1 input{
+              height: 4vh;
+              border-radius: 6px;
+              border: none;
+              text-align: center;
+              /* width: 100px; */
+        }
+        .maincontainer{
+            text-align: center;
+            position: relative;
+            left: 6%;
+        }
     </style>
 </head>
 
-<body>
+<body ng-app="view-udp">
     <div class="container">
         <h1>UDP Data</h1>
+        <p class="serachbar1">Search: <input type="text" ng-model="searchfeild" placeholder="Search Here.."/></p>
+        <div ng-controller="searchbar" class="maincontainer">
         <table class="udp">
             <thead>
                 <tr>
@@ -59,20 +82,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Sr_No</td>
-                    <td>Leader Enrollment No</td>
-                    <td>Leader Name</td>
-                    <td>Leader Email</td>
-                    <td>Gender</td>
-                    <td>Contact No</td>
-                    <td>Project Title</td>
-                    <td>Projcet Abstract</td>
-                    <td>Report</td>
+                <tr ng-repeat="udp in udpdata | filter:searchfeild">
+                    <td>{{udp.srno}}</td>
+                    <td>{{udp.leader_enroll}}</td>
+                    <td>{{udp.name}}</td>
+                    <td>{{udp.email}}</td>
+                    <td>{{udp.gender}}</td>
+                    <td>{{udp.conatct_no}}</td>
+                    <td>{{udp.project_title}}</td>
+                    <td>{{udp.project_abstarct}}</td>
+                    <td>{{udp.report}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
+    </div>
+    <script src="../scripts/viewScreenudp.js"></script>
 </body>
 
 </html>

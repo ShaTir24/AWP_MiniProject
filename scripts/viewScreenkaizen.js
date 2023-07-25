@@ -1,0 +1,38 @@
+const app=angular.module("view-kaizen",[]);
+app.controller('searchbar',function($scope){
+    var kaizendata=[{
+        srno:1,
+        enroll_no:1234,
+        Leader_name:'abc',
+        email:'ab33c@gmail.com',
+        conatct_no:'9879615010',
+        project_title:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:'',
+        winner_status:'yes',
+        certificate:''
+    },{
+        srno:2,
+        enroll_no:5534,
+        Leader_name:'pbc',
+        email:'abc344@gmail.com',
+        conatct_no:'9879615010',
+        project_title:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:'',
+        winner_status:'No',
+        certificate:''
+    },{
+        srno:3,
+        enroll_no:5534,
+        Leader_name:'xyc',
+        email:'xybc@gmail.com',
+        conatct_no:'9879615010',
+        project_title:'Xyz',
+        project_abstarct:'cbjdcjhnfwkrngvolkqodjiwsgcfei',
+        report:'',
+        winner_status:'no',
+        certificate:''
+    }]  
+    $scope.kaizendata=kaizendata;
+})

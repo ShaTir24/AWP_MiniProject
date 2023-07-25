@@ -38,12 +38,34 @@
             justify-content: center;
             align-items: center;
         }
+        .serachbar1{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            /* border:2px solid red; */
+            /* color: red; */
+        }
+        .serachbar1 input{
+              height: 4vh;
+              border-radius: 6px;
+              border: none;
+              text-align: center;
+              /* width: 100px; */
+        }
+        .maincontainer{
+            text-align: center;
+            position: relative;
+            left: 6%;
+        }
     </style>
 </head>
 
-<body>
+<body ng-app="view-idp">
     <div class="container">
         <h1>IDP Data</h1>
+        <p class="serachbar1">Search: <input type="text" ng-model="searchfeild" placeholder="Search Here.."/></p>
+        <div ng-controller="searchbar" class="maincontainer">
         <table class="idp">
             <thead>
                 <tr>
@@ -63,24 +85,25 @@
 
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>200280117001</td>
-                    <td>Xyz</td>
-                    <td>Female</td>
-                    <td>abc@gmail.com</td>
-                    <td>ABC</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td>1/1/23</td>
-                    <td>1/6/23</td>
-                    <td>Report</td>
-                    <td>Offer letter</td>
-                    <td>Completion Certificate</td>
+                <tr ng-repeat="idp in idpdata | filter:searchfeild">
+                    <td>{{idp.srno}}</td>
+                    <td>{{idp.enroll_no}}</td>
+                    <td>{{idp.name}}</td>
+                    <td>{{idp.gender}}</td>
+                    <td>{{idp.email}}</td>
+                    <td>{{idp.project_name}}</td>
+                    <td>{{idp.project_abstarct}}</td>
+                    <td>{{idp.startDate}}</td>
+                    <td>{{idp.endDate}}</td>
+                    <td>{{idp.report}}</td>
+                    <td>{{idp.completioncertificate}}</td>
+                    <td>{{idp.offerletter}}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
+    </div>
+    <script src="../scripts/viewScreenidp.js"></script>
 </body>
 
 </html>
