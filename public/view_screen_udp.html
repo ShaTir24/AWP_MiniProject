@@ -65,7 +65,7 @@
 <body ng-app="view-udp">
     <div class="container">
         <h1>UDP Data</h1>
-        <p class="serachbar1">Search: <input type="text" ng-model="searchfeild" placeholder="Search Here.."/></p>
+        <p class="serachbar1">Search: <input type="text" ng-model="searchfield" placeholder="Search Here.."/></p>
         <div ng-controller="searchbar" class="maincontainer">
         <table class="udp">
             <thead>
@@ -82,7 +82,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="udp in udpdata | filter:searchfeild">
+                <tr ng-repeat="udp in udpdata | filter:searchfield">
                     <td>{{udp.srno}}</td>
                     <td>{{udp.leader_enroll}}</td>
                     <td>{{udp.name}}</td>

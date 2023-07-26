@@ -64,7 +64,7 @@
 <body ng-app="view-idp">
     <div class="container">
         <h1>IDP Data</h1>
-        <p class="serachbar1">Search: <input type="text" ng-model="searchfeild" placeholder="Search Here.."/></p>
+        <p class="serachbar1">Search: <input type="text" ng-model="searchfield" placeholder="Search Here.."/></p>
         <div ng-controller="searchbar" class="maincontainer">
         <table class="idp">
             <thead>
@@ -85,7 +85,7 @@
 
             </thead>
             <tbody>
-                <tr ng-repeat="idp in idpdata | filter:searchfeild">
+                <tr ng-repeat="idp in idpdata | filter:searchfield">
                     <td>{{idp.srno}}</td>
                     <td>{{idp.enroll_no}}</td>
                     <td>{{idp.name}}</td>
